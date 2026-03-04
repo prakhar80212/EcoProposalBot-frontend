@@ -6,7 +6,7 @@ export default function HistoryPage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/proposal/history")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/proposal/history`)
       .then(res => setProposals(res.data.data))
       .catch(console.error);
   }, []);
