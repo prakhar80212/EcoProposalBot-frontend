@@ -8,7 +8,7 @@ export default function ImpactHistoryPage({ onSelect }) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/api/impact/history")
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/impact/history`)
       .then(res => {
         setImpacts(res.data.data);
         setLoading(false);
