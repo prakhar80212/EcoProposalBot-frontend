@@ -47,7 +47,7 @@ export default function ImpactPage({ selectedHistory }) {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/impact/generate",
+        `${import.meta.env.VITE_BACKEND_URL}/api/impact/generate`,
         payload
       );
 
